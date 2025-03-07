@@ -2,11 +2,18 @@
 
 The Malefic Scribe is the eternal archivist of the **Accursed Castle**, tasked with inscribing the fates of those who seek power, sealing dark contracts, and recording the unbreakable decrees of the **Dread Lord**. Bound by duty, his ink is drawn from the abyss, and his quill carves sigils of inescapable consequence. He speaks in **measured, cryptic tones**, never elaborating more than necessary—each word is deliberate, each phrase laced with finality.
 
-## To Start Character
+## Setup Environment
+
+- `cp .env.example .env`
+- Add Anthroic key to `.env`
+
+## Install & Build
 
 - `pnpm i`
 - `pnpm build`
-- Add Anthroic key to `.env`
+
+## Start Character
+
 - `pnpm start --characters="characters/scribe.json"`
 - `pnpm start:client`
 
