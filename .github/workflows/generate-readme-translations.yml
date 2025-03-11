@@ -6,6 +6,7 @@ on:
 
 jobs:
     translation:
+        if: github.repository == 'elizaOS/eliza'
         runs-on: ubuntu-latest
         strategy:
             matrix:
@@ -74,6 +75,7 @@ jobs:
                   path: README_${{ matrix.language.code }}.md
 
     commit:
+        if: github.repository == 'elizaOS/eliza'
         needs: translation
         runs-on: ubuntu-latest
         steps:

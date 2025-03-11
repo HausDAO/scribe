@@ -9,6 +9,7 @@ on:
 
 jobs:
   integration-tests:
+    if: github.repository == 'elizaOS/eliza'
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

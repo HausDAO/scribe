@@ -5,6 +5,7 @@ on:
             - "*"
 jobs:
     changelog:
+        if: github.repository == 'elizaOS/eliza'
         runs-on: ubuntu-latest
         permissions:
             contents: write

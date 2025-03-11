@@ -8,6 +8,7 @@ on:
             - edited
 jobs:
     check-branches:
+        if: github.repository == 'elizaOS/eliza'
         runs-on: ubuntu-latest
         steps:
             - name: Check branches
