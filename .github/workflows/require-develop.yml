@@ -8,17 +8,12 @@ on:
             - edited
 jobs:
     check-branches:
-        if: github.repository == 'elizaOS/eliza'
+        # Using a different approach that will definitely skip this for forks
+        if: github.event.pull_request.head.repo.owner.login == github.repository_owner
         runs-on: ubuntu-latest
         steps:
             - name: Check branches
               run: |
-                  # Skip check for forks
-                  if [ "${{ github.event.pull_request.head.repo.full_name }}" != "elizaOS/eliza" ]; then
-                    echo "Skipping branch check for fork"
-                    exit 0
-                  fi
-                  
                   if [ ${{ github.head_ref }} != "develop" ] && [ ${{ github.base_ref }} == "main" ]; then
                     echo "Merge requests to main branch are only allowed from dev branch."
                     exit 1

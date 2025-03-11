@@ -9,7 +9,7 @@ on:
 
 jobs:
   integration-tests:
-    if: github.repository == 'elizaOS/eliza' && (github.event_name != 'pull_request_target' || github.event.pull_request.head.repo.full_name == 'elizaOS/eliza')
+    if: github.event.pull_request.head.repo.owner.login == github.repository_owner
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
