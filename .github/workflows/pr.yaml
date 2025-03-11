@@ -6,6 +6,7 @@ on:
 
 jobs:
     check-pr-title:
+        if: github.repository == 'elizaOS/eliza'
         runs-on: ubuntu-latest
 
         steps:

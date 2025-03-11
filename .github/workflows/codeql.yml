@@ -10,6 +10,7 @@ on:
 
 jobs:
     analyze:
+        if: github.repository == 'elizaOS/eliza'
         name: Analyze (${{ matrix.language }})
         runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
         permissions:

@@ -6,6 +6,7 @@ on:
 
 jobs:
     stale:
+        if: github.repository == 'elizaOS/eliza' && github.event.pull_request.head.repo.full_name == 'elizaOS/eliza'
         runs-on: ubuntu-latest
         permissions:
             issues: write

@@ -9,6 +9,7 @@ on:
 
 jobs:
   integration-tests:
+    if: github.event.pull_request.head.repo.owner.login == github.repository_owner
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

@@ -8,6 +8,8 @@ on:
             - edited
 jobs:
     check-branches:
+        # Using a different approach that will definitely skip this for forks
+        if: github.event.pull_request.head.repo.owner.login == github.repository_owner
         runs-on: ubuntu-latest
         steps:
             - name: Check branches

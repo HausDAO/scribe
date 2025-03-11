@@ -4,6 +4,7 @@ on:
         types: [checks_requested]
 jobs:
     minimal-check:
+        if: github.repository == 'elizaOS/eliza'
         runs-on: ubuntu-latest
         steps:
             - name: Always pass
